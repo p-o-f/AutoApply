@@ -912,3 +912,347 @@ Finished processing: https://jobs.apple.com/en-us/search
 ```
 Queue complete! Hanging script to preserve session...
 ```
+
+**[2026-04-13T02:03:24.999Z]** ℹ️ 
+```
+Autoapply: Launching 48h Sprint Engine...
+```
+
+**[2026-04-13T02:03:27.163Z]** ✅ 
+```
+MCP Connected. Establishing Persistent Session...
+```
+
+**[2026-04-13T02:03:27.646Z]** 🛠️ 
+```
+Starting Job Application for: https://jobs.apple.com/en-us/search
+```
+
+**[2026-04-13T02:03:32.570Z]** ℹ️ 
+```
+--- [Loop 1] SENSE phase ---
+```
+
+**[2026-04-13T02:03:32.615Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:37.814Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"browser_click","arguments":{"ref":"e213"}}
+```
+
+**[2026-04-13T02:03:42.053Z]** ℹ️ 
+```
+--- [Loop 2] SENSE phase ---
+```
+
+**[2026-04-13T02:03:42.077Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:43.913Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:43.914Z]** ℹ️ 
+```
+--- [Loop 3] SENSE phase ---
+```
+
+**[2026-04-13T02:03:43.940Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:44.234Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:44.235Z]** ℹ️ 
+```
+--- [Loop 4] SENSE phase ---
+```
+
+**[2026-04-13T02:03:44.260Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:44.553Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:44.554Z]** ℹ️ 
+```
+--- [Loop 5] SENSE phase ---
+```
+
+**[2026-04-13T02:03:44.581Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:44.870Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:44.871Z]** ℹ️ 
+```
+--- [Loop 6] SENSE phase ---
+```
+
+**[2026-04-13T02:03:44.899Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:45.186Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:45.187Z]** ℹ️ 
+```
+--- [Loop 7] SENSE phase ---
+```
+
+**[2026-04-13T02:03:45.211Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:45.499Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:45.499Z]** ℹ️ 
+```
+--- [Loop 8] SENSE phase ---
+```
+
+**[2026-04-13T02:03:45.523Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:45.807Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:45.807Z]** ℹ️ 
+```
+--- [Loop 9] SENSE phase ---
+```
+
+**[2026-04-13T02:03:45.837Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:46.134Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:46.134Z]** ℹ️ 
+```
+--- [Loop 10] SENSE phase ---
+```
+
+**[2026-04-13T02:03:46.158Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:46.453Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:46.453Z]** ℹ️ 
+```
+--- [Loop 11] SENSE phase ---
+```
+
+**[2026-04-13T02:03:46.486Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:46.779Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:46.779Z]** ℹ️ 
+```
+--- [Loop 12] SENSE phase ---
+```
+
+**[2026-04-13T02:03:46.804Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:47.091Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:47.092Z]** ℹ️ 
+```
+--- [Loop 13] SENSE phase ---
+```
+
+**[2026-04-13T02:03:47.115Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:47.421Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:47.422Z]** ℹ️ 
+```
+--- [Loop 14] SENSE phase ---
+```
+
+**[2026-04-13T02:03:47.444Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:47.737Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:47.737Z]** ℹ️ 
+```
+--- [Loop 15] SENSE phase ---
+```
+
+**[2026-04-13T02:03:47.765Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:48.052Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:48.053Z]** ℹ️ 
+```
+--- [Loop 16] SENSE phase ---
+```
+
+**[2026-04-13T02:03:48.077Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:48.376Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:48.376Z]** ℹ️ 
+```
+--- [Loop 17] SENSE phase ---
+```
+
+**[2026-04-13T02:03:48.399Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:48.698Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:48.698Z]** ℹ️ 
+```
+--- [Loop 18] SENSE phase ---
+```
+
+**[2026-04-13T02:03:48.723Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:49.036Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:49.036Z]** ℹ️ 
+```
+--- [Loop 19] SENSE phase ---
+```
+
+**[2026-04-13T02:03:49.060Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:49.348Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:49.349Z]** ℹ️ 
+```
+--- [Loop 20] SENSE phase ---
+```
+
+**[2026-04-13T02:03:49.374Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T02:03:49.663Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{}
+```
+
+**[2026-04-13T02:03:49.664Z]** ✅ 
+```
+Finished processing: https://jobs.apple.com/en-us/search
+```
+
+**[2026-04-13T02:03:49.664Z]** ℹ️ 
+```
+Queue complete! Hanging script to preserve session...
+```

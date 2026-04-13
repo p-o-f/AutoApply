@@ -43,10 +43,9 @@ async function askOllama(prompt) {
     const response = await axios.post("http://127.0.0.1:11434/api/generate", {
       model: "qwen3:14b",
       prompt: prompt,
-      stream: false,
-      format: "json", // Force JSON for tool calling
+      stream: false
     });
-    return JSON.parse(response.data.response);
+    return response.data.response; // RETURN RAW STRING SO WE CAN AUDIT IT
   } catch (err) {
     logger.error(new Error(`Ollama connection failed: ${err.message}`));
     return null;
@@ -129,6 +128,7 @@ async function main() {
 
       let jobComplete = false;
       let loopCounter = 0;
+      let lastAction = null;
 
       // 4. THE AGENTIC LOOP
       while (!jobComplete && loopCounter < 20) {
@@ -173,12 +173,36 @@ ${appleRecipe}
 CURRENT DOM:
 ${treeText.substring(0, 15000)} // Context limit safety
 
+PREVIOUS AUTOMATED ACTION TAKEN:
+${lastAction ? JSON.stringify(lastAction) : "None (This is the first step)"}
+
+If the DOM did not change after the previous action, you must try a DIFFERENT tool or reference.
 OUTPUT STRICT JSON:`;
 
-        const qwenDecision = await askOllama(prompt);
+        const rawQwenResponse = await askOllama(prompt);
 
-        if (!qwenDecision || !qwenDecision.tool) {
-            logger.log("Failed to parse Qwen JSON. Retrying...", "error");
+        if (!rawQwenResponse) {
+            logger.log("Ollama returned empty response. Retrying...", "error");
+            continue;
+        }
+
+        let qwenDecision;
+        try {
+            // Robustly strip Markdown blocks and isolate the JSON object
+            let cleanStr = rawQwenResponse.replace(/```json/gi, '').replace(/```/g, '').trim();
+            const startIdx = cleanStr.indexOf('{');
+            const endIdx = cleanStr.lastIndexOf('}');
+            if (startIdx !== -1 && endIdx !== -1) {
+                 cleanStr = cleanStr.substring(startIdx, endIdx + 1);
+            }
+            qwenDecision = JSON.parse(cleanStr);
+        } catch (e) {
+            logger.log(`FATAL JSON PARSE ERROR. Raw output was:\n${rawQwenResponse}`, "error");
+            continue;
+        }
+
+        if (!qwenDecision.tool) {
+            logger.log(`Raw JSON was valid, but missing 'tool' key! Raw Output:\n${rawQwenResponse}`, "error");
             continue;
         }
 
@@ -206,10 +230,12 @@ OUTPUT STRICT JSON:`;
                  name: qwenDecision.tool,
                  arguments: qwenDecision.arguments || {}
               });
+              lastAction = qwenDecision; // Log action into history
               // Wait for UI to react
-              await new Promise(resolve => setTimeout(resolve, 2000));
+              await new Promise(resolve => setTimeout(resolve, 3000));
             } catch(e) {
                 logger.error(new Error(`Tool execution failed: ${e.message}`));
+                lastAction = { failed_attempt: qwenDecision, error: e.message };
             }
         }
       }
