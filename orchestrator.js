@@ -115,23 +115,59 @@ async function main() {
     const pendingJobs = JSON.parse(fs.readFileSync(path.join(__dirname, 'pending_jobs.json'), 'utf8'));
     const appleRecipe = fs.readFileSync(path.join(__dirname, 'recipes', 'apple_recipe.md'), 'utf8');
 
-    for (const targetUrl of pendingJobs) {
-      logger.log(`Starting Job Application for: ${targetUrl}`, "action");
+    for (let targetUrl of pendingJobs) {
+      logger.log(`Processing Job Queue Search URL: ${targetUrl}`, "action");
 
       await client.callTool({
         name: "browser_navigate",
         arguments: { url: targetUrl },
       });
 
-      // Allow initial page load
-      await new Promise(resolve => setTimeout(resolve, 3000));
+      // Allow search page to load
+      await new Promise(resolve => setTimeout(resolve, 4000));
 
-      let jobComplete = false;
-      let loopCounter = 0;
-      let lastAction = null;
+      logger.log(`Scraping individual Job details links...`, "info");
+      const scrapeRes = await client.callTool({
+         name: "browser_evaluate",
+         arguments: { function: `() => { return JSON.stringify(Array.from(new Set(Array.from(document.querySelectorAll('a')).map(a => a.href).filter(h => h && h.includes('/en-us/details/'))))); }` }
+      });
+      
+      let jobUrls = [];
+      try {
+           let dirtyText = scrapeRes.content[0].text;
+           
+           // Clean out any Markdown wrapper if it exists
+           if (dirtyText.includes('### Result')) {
+               dirtyText = dirtyText.split('### Result')[1].split('###')[0].trim();
+           }
+           
+           // Check if it's double-stringified (escaped)
+           if (dirtyText.startsWith('"') && dirtyText.endsWith('"')) {
+               dirtyText = JSON.parse(dirtyText);
+           }
+           
+           jobUrls = JSON.parse(dirtyText); 
+      } catch(e) {
+           logger.error(new Error(`Failed to parse scraped URLs: ${scrapeRes.content[0]?.text}`));
+      }
 
-      // 4. THE AGENTIC LOOP
-      while (!jobComplete && loopCounter < 20) {
+      logger.log(`Successfully extracted ${jobUrls.length} Apple Jobs from page!`, "success");
+
+      // Loop through each physical job listing
+      for (const singleJobUrl of jobUrls) {
+          logger.log(`\n\n--- NAVIGATING TO INDIVIDUAL JOB: ${singleJobUrl} ---`, "action");
+          await client.callTool({
+            name: "browser_navigate",
+            arguments: { url: singleJobUrl },
+          });
+          await new Promise(resolve => setTimeout(resolve, 3000));
+
+          let jobComplete = false;
+          let loopCounter = 0;
+          let lastAction = null;
+
+          // 4. THE AGENTIC LOOP (Per Job)
+          while (!jobComplete && loopCounter < 20) {
         loopCounter++;
         logger.log(`--- [Loop ${loopCounter}] SENSE phase ---`, "info");
 
@@ -238,12 +274,26 @@ OUTPUT STRICT JSON:`;
                 lastAction = { failed_attempt: qwenDecision, error: e.message };
             }
         }
-      }
+      } // end while loop
       
-      logger.log(`Finished processing: ${targetUrl}`, "success");
+      logger.log(`Finished processing specific job: ${singleJobUrl}`, "success");
+    } // end jobs array
+
+    logger.log(`Finished processing entire search page: ${targetUrl}`, "success");
+    
+    // Auto-paginate to page 2 and wait
+    if (targetUrl.includes('page=1')) {
+        const nextPageUrl = targetUrl.replace('page=1', 'page=2');
+        logger.log(`Force paginating to Page 2 (${nextPageUrl}) and dropping into Wait State...`, "info");
+        await client.callTool({
+          name: "browser_navigate",
+          arguments: { url: nextPageUrl },
+        });
     }
 
-    logger.log("Queue complete! Hanging script to preserve session...", "info");
+  }
+
+  logger.log("Queue complete! Hanging script to preserve session...", "info");
   } catch (err) {
     logger.error(err);
     process.exit(1);

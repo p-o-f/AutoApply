@@ -1256,3 +1256,432 @@ Finished processing: https://jobs.apple.com/en-us/search
 ```
 Queue complete! Hanging script to preserve session...
 ```
+
+**[2026-04-13T02:11:27.655Z]** ℹ️ 
+```
+Heartbeat: Pinging session...
+```
+
+**[2026-04-13T02:19:27.662Z]** ℹ️ 
+```
+Heartbeat: Pinging session...
+```
+
+**[2026-04-13T02:27:27.671Z]** ℹ️ 
+```
+Heartbeat: Pinging session...
+```
+
+**[2026-04-13T02:35:27.674Z]** ℹ️ 
+```
+Heartbeat: Pinging session...
+```
+
+**[2026-04-13T02:43:27.681Z]** ℹ️ 
+```
+Heartbeat: Pinging session...
+```
+
+**[2026-04-13T02:51:27.687Z]** ℹ️ 
+```
+Heartbeat: Pinging session...
+```
+
+**[2026-04-13T02:59:27.700Z]** ℹ️ 
+```
+Heartbeat: Pinging session...
+```
+
+**[2026-04-13T07:08:49.657Z]** ℹ️ 
+```
+Autoapply: Launching 48h Sprint Engine...
+```
+
+**[2026-04-13T07:08:52.546Z]** ✅ 
+```
+MCP Connected. Establishing Persistent Session...
+```
+
+**[2026-04-13T07:08:52.957Z]** 🛠️ 
+```
+Processing Job Queue Search URL: https://jobs.apple.com/en-us/search?location=united-states-USA&page=1
+```
+
+**[2026-04-13T07:08:59.102Z]** ℹ️ 
+```
+Scraping individual Job details links...
+```
+
+**[2026-04-13T07:08:59.113Z]** ❌ 
+```
+Error: Failed to parse scraped URLs: ### Error
+[
+  {
+    "expected": "string",
+    "code": "invalid_type",
+    "path": [
+      "function"
+    ],
+    "message": "Invalid input: expected string, received undefined"
+  }
+]
+    at main (C:\Users\parth\OneDrive\Desktop\jeeter\AutoApply\orchestrator.js:140:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+```
+
+**[2026-04-13T07:08:59.114Z]** ✅ 
+```
+Successfully extracted 0 Apple Jobs from page!
+```
+
+**[2026-04-13T07:08:59.114Z]** ✅ 
+```
+Finished processing entire search page: https://jobs.apple.com/en-us/search?location=united-states-USA&page=1
+```
+
+**[2026-04-13T07:08:59.115Z]** ℹ️ 
+```
+Force paginating to Page 2 (https://jobs.apple.com/en-us/search?location=united-states-USA&page=2) and dropping into Wait State...
+```
+
+**[2026-04-13T07:08:59.801Z]** ℹ️ 
+```
+Queue complete! Hanging script to preserve session...
+```
+
+**[2026-04-13T07:10:34.200Z]** ℹ️ 
+```
+Autoapply: Launching 48h Sprint Engine...
+```
+
+**[2026-04-13T07:10:36.325Z]** ✅ 
+```
+MCP Connected. Establishing Persistent Session...
+```
+
+**[2026-04-13T07:10:36.792Z]** 🛠️ 
+```
+Processing Job Queue Search URL: https://jobs.apple.com/en-us/search?location=united-states-USA&page=1
+```
+
+**[2026-04-13T07:10:42.148Z]** ℹ️ 
+```
+Scraping individual Job details links...
+```
+
+**[2026-04-13T07:10:42.154Z]** ❌ 
+```
+Error: Failed to parse scraped URLs: ### Error
+Error: TypeError: result is not a function
+    at UtilityScript.evaluate (<anonymous>:304:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+    at main (C:\Users\parth\OneDrive\Desktop\jeeter\AutoApply\orchestrator.js:140:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+```
+
+**[2026-04-13T07:10:42.155Z]** ✅ 
+```
+Successfully extracted 0 Apple Jobs from page!
+```
+
+**[2026-04-13T07:10:42.155Z]** ✅ 
+```
+Finished processing entire search page: https://jobs.apple.com/en-us/search?location=united-states-USA&page=1
+```
+
+**[2026-04-13T07:10:42.155Z]** ℹ️ 
+```
+Force paginating to Page 2 (https://jobs.apple.com/en-us/search?location=united-states-USA&page=2) and dropping into Wait State...
+```
+
+**[2026-04-13T07:10:42.812Z]** ℹ️ 
+```
+Queue complete! Hanging script to preserve session...
+```
+
+**[2026-04-13T07:18:21.296Z]** ℹ️ 
+```
+Autoapply: Launching 48h Sprint Engine...
+```
+
+**[2026-04-13T07:18:23.361Z]** ✅ 
+```
+MCP Connected. Establishing Persistent Session...
+```
+
+**[2026-04-13T07:18:23.800Z]** 🛠️ 
+```
+Processing Job Queue Search URL: https://jobs.apple.com/en-us/search?location=united-states-USA&page=1
+```
+
+**[2026-04-13T07:18:29.419Z]** ℹ️ 
+```
+Scraping individual Job details links...
+```
+
+**[2026-04-13T07:18:30.477Z]** ❌ 
+```
+Error: Failed to parse scraped URLs: ### Result
+"[\"https://jobs.apple.com/en-us/details/114438158/us-specialist-full-time-part-time-and-part-time-temporary?team=APPST\",\"https://jobs.apple.com/en-us/details/114438158/us-specialist-full-time-part-time-and-part-time-temporary/locationPicker\",\"https://jobs.apple.com/en-us/details/200649196-3401/wireless-systems-engineer-ranging-and-sensing?team=HRDWR\",\"https://jobs.apple.com/en-us/details/200657471-3956/mixed-signal-hardware-design-engineer?team=HRDWR\",\"https://jobs.apple.com/en-us/details/200655517-0157/software-engineer-full-stack-ebusiness-services?team=SFTWR\",\"https://jobs.apple.com/en-us/details/200657036-3956/cellular-rf-receiver-algorithms-systems-engineer?team=HRDWR\",\"https://jobs.apple.com/en-us/details/200657036-6205/cellular-rf-receiver-algorithms-systems-engineer?team=HRDWR\",\"https://jobs.apple.com/en-us/details/200631912-0836/audio-pd-engineer?team=HRDWR\",\"https://jobs.apple.com/en-us/details/200657447-3956/wireless-verification-infrastructure-engineer?team=HRDWR\",\"https://jobs.apple.com/en-us/details/200657444-3543/emulation-verification-engineer?team=HRDWR\",\"https://jobs.apple.com/en-us/details/200657451-0836/software-engineer-trusted-execution-security-systems?team=SFTWR\",\"https://jobs.apple.com/en-us/details/200606283-0836/audio-pd-engineer?team=HRDWR\",\"https://jobs.apple.com/en-us/details/200656913-3089/us-genius?team=APPST\",\"https://jobs.apple.com/en-us/details/200656061-3956/designer-interactive?team=MKTG\",\"https://jobs.apple.com/en-us/details/200657214-0836/physical-design-engineer?team=HRDWR\",\"https://jobs.apple.com/en-us/details/200657228-0836/physical-design-engineer?team=HRDWR\",\"https://jobs.apple.com/en-us/details/200657241-0836/physical-design-engineer?team=HRDWR\",\"https://jobs.apple.com/en-us/details/200657250-3543/rtl-design-engineer?team=HRDWR\",\"https://jobs.apple.com/en-us/details/200657252-1435/rtl-design-engineer?team=HRDWR\",\"https://jobs.apple.com/en-us/details/200656136-3337/machine-learning-engineer-apple-services-engineering?team=MLAI\",\"https://jobs.apple.com/en-us/details/200657297-3725/ios-home-application-engineer-wireless-technologies-ecosystems?team=SFTWR\"]"
+### Ran Playwright code
+```js
+await page.evaluate('() => { return JSON.stringify(Array.from(new Set(Array.from(document.querySelectorAll(\'a\')).map(a => a.href).filter(h => h && h.includes(\'/en-us/details/\'))))); }');
+```
+    at main (C:\Users\parth\OneDrive\Desktop\jeeter\AutoApply\orchestrator.js:140:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+```
+
+**[2026-04-13T07:18:30.478Z]** ✅ 
+```
+Successfully extracted 0 Apple Jobs from page!
+```
+
+**[2026-04-13T07:18:30.478Z]** ✅ 
+```
+Finished processing entire search page: https://jobs.apple.com/en-us/search?location=united-states-USA&page=1
+```
+
+**[2026-04-13T07:18:30.479Z]** ℹ️ 
+```
+Force paginating to Page 2 (https://jobs.apple.com/en-us/search?location=united-states-USA&page=2) and dropping into Wait State...
+```
+
+**[2026-04-13T07:18:31.318Z]** ℹ️ 
+```
+Queue complete! Hanging script to preserve session...
+```
+
+**[2026-04-13T07:25:20.795Z]** ℹ️ 
+```
+Autoapply: Launching 48h Sprint Engine...
+```
+
+**[2026-04-13T07:25:22.933Z]** ✅ 
+```
+MCP Connected. Establishing Persistent Session...
+```
+
+**[2026-04-13T07:25:23.411Z]** 🛠️ 
+```
+Processing Job Queue Search URL: https://jobs.apple.com/en-us/search?location=united-states-USA&page=1
+```
+
+**[2026-04-13T07:25:29.060Z]** ℹ️ 
+```
+Scraping individual Job details links...
+```
+
+**[2026-04-13T07:25:30.126Z]** ✅ 
+```
+Successfully extracted 21 Apple Jobs from page!
+```
+
+**[2026-04-13T07:25:30.127Z]** 🛠️ 
+```
+
+
+--- NAVIGATING TO INDIVIDUAL JOB: https://jobs.apple.com/en-us/details/114438158/us-specialist-full-time-part-time-and-part-time-temporary?team=APPST ---
+```
+
+**[2026-04-13T07:25:34.365Z]** ℹ️ 
+```
+--- [Loop 1] SENSE phase ---
+```
+
+**[2026-04-13T07:27:43.736Z]** ✅ 
+```
+Gatekeeper passed. Resuming Loop.
+```
+
+**[2026-04-13T07:27:43.737Z]** ℹ️ 
+```
+--- [Loop 2] SENSE phase ---
+```
+
+**[2026-04-13T07:27:43.786Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:28:06.638Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"browser_click","reference":"e134"}
+```
+
+**[2026-04-13T07:28:09.654Z]** ℹ️ 
+```
+--- [Loop 3] SENSE phase ---
+```
+
+**[2026-04-13T07:28:09.681Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:29:10.691Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"browser_click","reference":"e132"}
+```
+
+**[2026-04-13T07:29:13.698Z]** ℹ️ 
+```
+--- [Loop 4] SENSE phase ---
+```
+
+**[2026-04-13T07:29:13.728Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:29:45.725Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"browser_click","reference":"e134"}
+```
+
+**[2026-04-13T07:29:48.740Z]** ℹ️ 
+```
+--- [Loop 5] SENSE phase ---
+```
+
+**[2026-04-13T07:29:48.779Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:34:12.059Z]** ℹ️ 
+```
+Autoapply: Launching 48h Sprint Engine...
+```
+
+**[2026-04-13T07:34:14.767Z]** ✅ 
+```
+MCP Connected. Establishing Persistent Session...
+```
+
+**[2026-04-13T07:34:15.289Z]** 🛠️ 
+```
+Processing Job Queue Search URL: https://jobs.apple.com/en-us/search?location=united-states-USA&page=1
+```
+
+**[2026-04-13T07:34:21.272Z]** ℹ️ 
+```
+Scraping individual Job details links...
+```
+
+**[2026-04-13T07:34:22.331Z]** ✅ 
+```
+Successfully extracted 21 Apple Jobs from page!
+```
+
+**[2026-04-13T07:34:22.332Z]** 🛠️ 
+```
+
+
+--- NAVIGATING TO INDIVIDUAL JOB: https://jobs.apple.com/en-us/details/114438158/us-specialist-full-time-part-time-and-part-time-temporary?team=APPST ---
+```
+
+**[2026-04-13T07:34:26.898Z]** ℹ️ 
+```
+--- [Loop 1] SENSE phase ---
+```
+
+**[2026-04-13T07:34:26.926Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:34:56.132Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{"action": "click", "selector": "[ref='e134']"}
+```
+
+**[2026-04-13T07:34:56.133Z]** ℹ️ 
+```
+--- [Loop 2] SENSE phase ---
+```
+
+**[2026-04-13T07:34:56.171Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:35:23.303Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{
+  "action": "click",
+  "selector": "a[href='/en-us/details/114438158/us-specialist-full-time-part-time-and-part-time-temporary/locationPicker']",
+  "context": "Clicking 'Where we're hiring' to proceed with location selection as part of the application process."
+}
+```
+
+**[2026-04-13T07:35:23.303Z]** ℹ️ 
+```
+--- [Loop 3] SENSE phase ---
+```
+
+**[2026-04-13T07:35:23.331Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:35:31.951Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"browser_click","arguments":{"ref":"e134"}}
+```
+
+**[2026-04-13T07:35:37.678Z]** ℹ️ 
+```
+--- [Loop 4] SENSE phase ---
+```
+
+**[2026-04-13T07:35:37.712Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:35:47.091Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"browser_click","arguments":{"ref":"e117"}}
+```
+
+**[2026-04-13T07:35:51.170Z]** ℹ️ 
+```
+--- [Loop 5] SENSE phase ---
+```
+
+**[2026-04-13T07:35:51.229Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:36:06.175Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"browser_click","arguments":{"ref":"e134"}}
+```
+
+**[2026-04-13T07:36:11.725Z]** ℹ️ 
+```
+--- [Loop 6] SENSE phase ---
+```
+
+**[2026-04-13T07:36:11.753Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:46:46.510Z]** ℹ️ 
+```
+Autoapply: Launching 48h Sprint Engine...
+```
+
+**[2026-04-13T07:46:48.831Z]** ✅ 
+```
+MCP Connected. Establishing Persistent Session...
+```
+
+**[2026-04-13T07:46:49.393Z]** 🛠️ 
+```
+Processing Job Queue Search URL: https://jobs.apple.com/en-us/search?location=united-states-USA&page=1
+```

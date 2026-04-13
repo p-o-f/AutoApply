@@ -9,3 +9,8 @@ yarn-error.log*
 .pnpm-debug.log*
 # Playwright temp files
 .playwright-mcp/
+# Gemini created files for testing
+tools.json
+list_tools.js
+#personal info
+profile.json
