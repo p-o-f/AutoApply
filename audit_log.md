@@ -1685,3 +1685,310 @@ MCP Connected. Establishing Persistent Session...
 ```
 Processing Job Queue Search URL: https://jobs.apple.com/en-us/search?location=united-states-USA&page=1
 ```
+
+**[2026-04-13T07:46:55.161Z]** ℹ️ 
+```
+Scraping individual Job details links...
+```
+
+**[2026-04-13T07:46:56.240Z]** ✅ 
+```
+Successfully extracted 21 Apple Jobs from page!
+```
+
+**[2026-04-13T07:46:56.241Z]** 🛠️ 
+```
+
+
+--- NAVIGATING TO INDIVIDUAL JOB: https://jobs.apple.com/en-us/details/114438158/us-specialist-full-time-part-time-and-part-time-temporary?team=APPST ---
+```
+
+**[2026-04-13T07:47:00.863Z]** ℹ️ 
+```
+--- [Loop 1] SENSE phase ---
+```
+
+**[2026-04-13T07:47:00.893Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:47:45.631Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"click","reference":"e112"}
+```
+
+**[2026-04-13T07:47:48.646Z]** ℹ️ 
+```
+--- [Loop 2] SENSE phase ---
+```
+
+**[2026-04-13T07:47:48.685Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:49:29.650Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"click","reference":"e110"}
+```
+
+**[2026-04-13T07:49:32.663Z]** ℹ️ 
+```
+--- [Loop 3] SENSE phase ---
+```
+
+**[2026-04-13T07:49:32.698Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:50:03.987Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"browser_click","arguments":{"ref":"e112"}}
+```
+
+**[2026-04-13T07:50:10.262Z]** ℹ️ 
+```
+--- [Loop 4] SENSE phase ---
+```
+
+**[2026-04-13T07:50:10.293Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:50:55.965Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"browser_click","arguments":{"ref":"e121"}}
+```
+
+**[2026-04-13T07:51:00.125Z]** ℹ️ 
+```
+--- [Loop 5] SENSE phase ---
+```
+
+**[2026-04-13T07:51:00.164Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:52:33.334Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"browser_click","arguments":{"ref":"e359"}}
+```
+
+**[2026-04-13T07:52:37.432Z]** ℹ️ 
+```
+--- [Loop 6] SENSE phase ---
+```
+
+**[2026-04-13T07:52:37.468Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:53:35.934Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"browser_click","arguments":{"ref":"e368"}}
+```
+
+**[2026-04-13T07:53:40.097Z]** ℹ️ 
+```
+--- [Loop 7] SENSE phase ---
+```
+
+**[2026-04-13T07:53:40.130Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:54:24.896Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"browser_click","arguments":{"ref":"e378"}}
+```
+
+**[2026-04-13T07:54:28.998Z]** ℹ️ 
+```
+--- [Loop 8] SENSE phase ---
+```
+
+**[2026-04-13T07:54:29.037Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:54:49.396Z]** ℹ️ 
+```
+Heartbeat: Pinging session...
+```
+
+**[2026-04-13T07:55:41.227Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"browser_type","arguments":{"ref":"e383","value":"95001"}}
+```
+
+**[2026-04-13T07:55:44.232Z]** ℹ️ 
+```
+--- [Loop 9] SENSE phase ---
+```
+
+**[2026-04-13T07:55:44.256Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T07:55:57.857Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"browser_click","arguments":{"ref":"e387"}}
+```
+
+**[2026-04-13T07:56:01.995Z]** ℹ️ 
+```
+--- [Loop 10] SENSE phase ---
+```
+
+**[2026-04-13T07:56:02.025Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T08:09:26.380Z]** ℹ️ 
+```
+Autoapply: Launching 48h Sprint Engine...
+```
+
+**[2026-04-13T08:09:29.212Z]** ✅ 
+```
+MCP Connected. Establishing Persistent Session...
+```
+
+**[2026-04-13T08:09:29.725Z]** 🛠️ 
+```
+Processing Job Queue Search URL: https://jobs.apple.com/en-us/search?location=united-states-USA&page=1
+```
+
+**[2026-04-13T08:09:35.475Z]** ℹ️ 
+```
+Scraping individual Job details links...
+```
+
+**[2026-04-13T08:09:36.537Z]** ✅ 
+```
+Successfully extracted 21 Apple Jobs from page!
+```
+
+**[2026-04-13T08:09:36.538Z]** 🛠️ 
+```
+
+
+--- NAVIGATING TO INDIVIDUAL JOB: https://jobs.apple.com/en-us/details/114438158/us-specialist-full-time-part-time-and-part-time-temporary?team=APPST ---
+```
+
+**[2026-04-13T08:09:41.246Z]** ℹ️ 
+```
+--- [Loop 1] SENSE phase ---
+```
+
+**[2026-04-13T08:09:41.274Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T08:10:01.325Z]** ❌ 
+```
+Raw JSON was valid, but missing 'tool' key! Raw Output:
+{"action": "click", "selector": "[ref='e134']"}
+```
+
+**[2026-04-13T08:10:01.326Z]** ℹ️ 
+```
+--- [Loop 2] SENSE phase ---
+```
+
+**[2026-04-13T08:10:01.355Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T08:10:15.263Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"click","arguments":{}}
+```
+
+**[2026-04-13T08:10:18.279Z]** ℹ️ 
+```
+--- [Loop 3] SENSE phase ---
+```
+
+**[2026-04-13T08:10:18.309Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T08:10:54.146Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"success","arguments":{}}
+```
+
+**[2026-04-13T08:10:54.147Z]** ✅ 
+```
+SUCCESS DETECTED! Writing to audit log...
+```
+
+**[2026-04-13T08:10:54.481Z]** ✅ 
+```
+Finished processing specific job: https://jobs.apple.com/en-us/details/114438158/us-specialist-full-time-part-time-and-part-time-temporary?team=APPST
+```
+
+**[2026-04-13T08:10:54.482Z]** 🛠️ 
+```
+
+
+--- NAVIGATING TO INDIVIDUAL JOB: https://jobs.apple.com/en-us/details/114438158/us-specialist-full-time-part-time-and-part-time-temporary/locationPicker ---
+```
+
+**[2026-04-13T08:10:59.480Z]** ℹ️ 
+```
+--- [Loop 1] SENSE phase ---
+```
+
+**[2026-04-13T08:10:59.508Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T08:11:10.574Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"type-into-textbox","arguments":{}}
+```
+
+**[2026-04-13T08:11:13.589Z]** ℹ️ 
+```
+--- [Loop 2] SENSE phase ---
+```
+
+**[2026-04-13T08:11:13.645Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T08:11:26.480Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"click-link","arguments":{}}
+```
+
+**[2026-04-13T08:11:29.481Z]** ℹ️ 
+```
+--- [Loop 3] SENSE phase ---
+```
+
+**[2026-04-13T08:11:29.536Z]** 🧠 
+```
+Passing state to Qwen3...
+```
+
+**[2026-04-13T08:11:52.783Z]** 🛠️ 
+```
+Qwen determined action: {"tool":"click-link","arguments":{}}
+```

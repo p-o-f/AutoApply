@@ -197,11 +197,11 @@ async function main() {
 
         // Think: Ask Qwen
         logger.log("Passing state to Qwen3...", "think");
-        const prompt = `You are an autonomous application agent. Respond ONLY in valid JSON. No conversational text.
+          const prompt = `You are an autonomous application agent. Respond ONLY in valid JSON. No conversational text.
 Allowed tools: 'browser_click', 'browser_fill_form', 'success'.
-For 'browser_click', output: {"tool": "browser_click", "arguments": {"ref": "the_ref_from_tree"}}
-For 'browser_fill_form', output: {"tool": "browser_fill_form", "arguments": {"ref": "...", "value": "..."}}
-For 'success', output: {"tool": "success"}
+For 'browser_click', output: {"thought": "your reasoning", "tool": "browser_click", "arguments": {"ref": "the_ref_from_tree"}}
+For 'browser_fill_form', output: {"thought": "your reasoning", "tool": "browser_fill_form", "arguments": {"ref": "...", "value": "..."}}
+For 'success', output: {"thought": "your reasoning", "tool": "success"}
 
 RECIPE:
 ${appleRecipe}
@@ -241,8 +241,10 @@ OUTPUT STRICT JSON:`;
             logger.log(`Raw JSON was valid, but missing 'tool' key! Raw Output:\n${rawQwenResponse}`, "error");
             continue;
         }
-
-        logger.log(`Qwen determined action: ${JSON.stringify(qwenDecision)}`, "action");
+        if (qwenDecision.thought) {
+            logger.log(`Qwen's Thought: ${qwenDecision.thought}`, "info");
+        }
+        logger.log(`Qwen determined action: {"tool":"${qwenDecision.tool}","arguments":${JSON.stringify(qwenDecision.arguments || {})}}`, "action");
 
         // Act: Execute the Tool or Trigger Success
         if (qwenDecision.tool === "success") {
