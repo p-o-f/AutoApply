@@ -5,9 +5,9 @@
 3. Open a job url in a new tab.
 4. Review the job's details. If there is any indication like "Submitted" or "You've already applied" then you're done, skip and move on to the next job.
 5. Click the button called "Submit Resume".
-6. The user's resume is preloaded (pre-filled in). Simply move to the next page (via "Continue" button) until a "Submit" button is there to finish the job application.
+6. The user's resume is most likely preloaded (pre-filled in). You should see a "remove" button. Use the resume upload logic from General Directives - if the current resume is not the correct one, remove it (click the "remove" button) and upload the correct one. Then, simply move to the next page (via "Continue" button) until a "Submit" button is there to finish the job application.
 7. If you see an option to either "Use my resume to fill out my profile" or "Skip, use my existing profile details" then pick the latter.
-8. If you are asked to fill anything out like "employer" or other information, then go back and repeat step 7, because it means you did step 7 wrong previously.
+8. If you are asked to fill anything out like "employer" or other information, then go back by clicking the back button, and repeat step 7, because it means you did step 7 wrong previously.
 9. Submit the application once you see a "Submit" button.
 10. You should see some text saying "Thanks, your information has been submitted for [role name]" or something similar. This means the job has been applied to successfully.
 11. Once the job has been applied to successfully, close the tab and move to the next job url.

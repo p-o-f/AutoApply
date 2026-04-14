@@ -16,3 +16,6 @@ auth_sessions/
 logs/
 audit_log.md
 resumes/
+cache/
+fix_newlines.js
+check_tools.js
