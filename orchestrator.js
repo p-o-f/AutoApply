@@ -119,6 +119,10 @@ async function main() {
       path.join(__dirname, "recipes", "apple_recipe.md"),
       "utf8",
     );
+    const userProfile = fs.readFileSync(
+      path.join(__dirname, "profile.json"),
+      "utf8",
+    );
 
     for (let targetUrl of pendingJobs) {
       logger.log(`Processing Job Queue Search URL: ${targetUrl}`, "action");
@@ -271,9 +275,47 @@ async function main() {
               ? treeRes.content[0].text
               : "";
 
-          // Strip the massive Apple Footer — it's 60%+ of the tree and confuses the LLM
-          const footerIdx = rawTreeText.indexOf('contentinfo "Apple Footer"');
-          const treeText = footerIdx !== -1 ? rawTreeText.substring(0, footerIdx) : rawTreeText;
+          // --- DOM PRUNING (Noise Reduction) ---
+          function pruneAccessibilityTree(treeString) {
+            const lines = treeString.split('\\n');
+            const result = [];
+            let skipIndentLevel = -1;
+
+            for (const line of lines) {
+              const currentIndent = line.match(/^\\s*/)[0].length;
+
+              if (skipIndentLevel !== -1) {
+                // If it's a child (more indented), skip it
+                if (currentIndent > skipIndentLevel) {
+                  continue;
+                } else {
+                  // We've popped back out of the massive node, stop skipping
+                  skipIndentLevel = -1;
+                }
+              }
+
+              // Prune specific known massive noise nodes
+              if (line.includes('navigation "Global"')) {
+                skipIndentLevel = currentIndent;
+                continue;
+              }
+
+              const trimmed = line.trim();
+              // Strip empty structural nodes that have no refs and no text (just pure bloat)
+              if (trimmed === '- generic:' || trimmed === '- generic' || trimmed === '- img:' || trimmed === '- img') {
+                 continue;
+              }
+
+              result.push(line);
+            }
+            return result.join('\\n');
+          }
+
+          let treeText = pruneAccessibilityTree(rawTreeText);
+
+          // Strip the massive Apple Footer
+          const footerIdx = treeText.indexOf('contentinfo "Apple Footer"');
+          treeText = footerIdx !== -1 ? treeText.substring(0, footerIdx) : treeText;
 
           // Gatekeeper Check
           if (treeText.includes("Sign In") || treeText.includes("Log In")) {
@@ -290,6 +332,9 @@ async function main() {
 
 CURRENT URL:
 ${singleJobUrl}
+
+APPLICANT PROFILE DATA & DIRECTIVES:
+${userProfile}
 
 RECIPE:
 ${appleRecipe}
